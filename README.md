@@ -5,3 +5,8 @@ Imagine that nature emerges from ample pairs of immutable Planck radius spherica
 For **NPQG** basics see: *[Idealized Neoclassical Model](https://johnmarkmorris.com/2019/06/24/idealized-neoclassical-model/)* and the *[NPQG Glosssary](https://johnmarkmorris.com/2019/06/12/glossary-of-neoclassical-physics-and-quantum-gravity/)*.
 
 More information can be found at https://johnmarkmorris.com/
+
+Project Metadata
+Goal : reference implementation from fundamentals
+Goal : integrated design for online learning
+Language : Python
