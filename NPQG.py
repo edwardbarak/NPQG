@@ -12,6 +12,14 @@ class planckSphere:
         chargeMagnitude (Fraction): Fraction object from fractions library 
     """
 
+    # Class Variables
+    # TODO: Determine if radius affects other shape calculations like in regular geometry
+    radius = 1.0
+    diameter = 2.0
+    circumference = 6.283
+    surfaceArea = 12.566
+    volume = 4.189
+
     def __init__(self, planckType, planckRadius, point=Point(0,0,0), vector=Vector(0,0,0), chargeMagnitude=Fraction(1,6)):
         # process args
         if planckType == 'electrino':
@@ -21,10 +29,7 @@ class planckSphere:
             self.planckType = planckType
             self.charge = chargeMagnitude
         else:
-            raise TypeError('planckType must be electrino OR positrino')            
-        
-        # TODO: Determine if radius affects other shape calculations like in regular geometry
-        # self.radius = float(planckRadius)
+            raise TypeError('planckType must be electrino OR positrino')                     
 
         if isinstance(point, Point):
             self.point = point
