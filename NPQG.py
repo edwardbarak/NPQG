@@ -13,6 +13,7 @@ class planckSphere:
     """
 
     def __init__(self, planckType, planckRadius, point=Point(0,0,0), vector=Vector(0,0,0), chargeMagnitude=Fraction(1,6)):
+        # process args
         if planckType == 'electrino':
             self.planckType = planckType
             self.charge = chargeMagnitude * -1
@@ -22,54 +23,55 @@ class planckSphere:
         else:
             raise TypeError('planckType must be electrino OR positrino')            
         
-        self.radius = float(planckRadius)
+        # TODO: Determine if radius affects other shape calculations like in regular geometry
+        # self.radius = float(planckRadius)
 
         if isinstance(point, Point):
             self.point = point
         if isinstance(vector, Vector):
             self.vector = vector    
 
+    # TODO
     def nextPoint(self):
-        # TODO
         pass
     
+    # TODO
     def calculateElectricField(self):
-        # TODO
-        # NOTES: 
-        # Each and every Planck sphere is always emitting an electric field.
-        # Electric fields exert forces on other Planck spheres.
-        # electrino repulses electrino
-        # positrino repulses positrino
-        # electrino attracts positrino and vice versa.
-        # The electric field emitted by a Planck sphere propogates at local c in Map 1 (Euclidean space and time).
-        # The radial distance from the center of the sphere is used to calculate field strength. 
-        # The radius of the planck sphere is the planck length. 
-        # Spheres are immutable so no other Planck sphere can overlap within their radius. 
-        # We should measure distance such that everything is measured in planck lengths as the unit vector. 
-        # At a radial distance of 1 Planck length, i.e., the surface of the Planck sphere, electric field is (e/6)/ (1 squared) which is e/6. 
-        # At a radial distance of 1.5 Planck lengths the field is e/(6*1.5*1.5). 
-        # Charge is measured in e, so likewise e can be considered as 1 unit charge.
-        # Assumption: Electric fields are not impeded by other Planck spheres. (i.e., passes through them)
-        # Electric field spreads out spherically at 1/(radial distance squared)
-        # At each point in space the electric field has a vector direction, which is radial from the location of the Planck sphere at the time when it was emitted.
-        # At each point in absolute time and absolute space (Map 1) the total vector electric field is the vector sum of all arriving electric fields.
+        # NOTE: Each and every Planck sphere is always emitting an electric field.
+        # NOTE: Electric fields exert forces on other Planck spheres.
+        # NOTE: electrino repulses electrino
+        # NOTE: positrino repulses positrino
+        # NOTE: electrino attracts positrino and vice versa.
+        # NOTE: The electric field emitted by a Planck sphere propogates at local c in Map 1 (Euclidean space and time).
+        # NOTE: The radial distance from the center of the sphere is used to calculate field strength. 
+        # NOTE: The radius of the planck sphere is the planck length. 
+        # NOTE: Spheres are immutable so no other Planck sphere can overlap within their radius. 
+        # NOTE: We should measure distance such that everything is measured in planck lengths as the unit vector. 
+        # NOTE: At a radial distance of 1 Planck length, i.e., the surface of the Planck sphere, electric field is (e/6)/ (1 squared) which is e/6. 
+        # NOTE: At a radial distance of 1.5 Planck lengths the field is e/(6*1.5*1.5). 
+        # NOTE: Charge is measured in e, so likewise e can be considered as 1 unit charge.
+        # NOTE: Assumption: Electric fields are not impeded by other Planck spheres. (i.e., passes through them)
+        # NOTE: Electric field spreads out spherically at 1/(radial distance squared)
+        # NOTE: At each point in space the electric field has a vector direction, which is radial from the location of the Planck sphere at the time when it was emitted.
+        # NOTE: At each point in absolute time and absolute space (Map 1) the total vector electric field is the vector sum of all arriving electric fields.
         pass
     
+    # TODO
     def calculateMagneticField(self):
-        # TODO
-        # NOTES: 
-        # If a particle is moving it creates a magnetic field.  
-        # Magnetic fields exert forces on charged particles. 
-        # The magnetic field emitted by a Planck sphere propogates at local c in Map 1 (Euclidean space and time). 
-        # The Planck sphere charge plays into the configuration of the magnetic field (like is it curling clockwise or anticlockwise).
-        # Assumption: Magnetic fields are not impeded by other Planck spheres. (i.e., passes through them)
-        # TODO : look at shape of spreading magnetic field from a moving charge.
-        # At each point in space the magnetic field has a vector direction, which is related (TBD) to the location of the Planck sphere at the time when it was emitted.
-        # At each point in absolute time and absolute space (Map 1) the total vector magnetic field is the vector sum of all arriving magnetic fields.
+        # TODO: look at shape of spreading magnetic field from a moving charge.
+        # NOTE: If a particle is moving it creates a magnetic field.  
+        # NOTE: Magnetic fields exert forces on charged particles. 
+        # NOTE: The magnetic field emitted by a Planck sphere propogates at local c in Map 1 (Euclidean space and time). 
+        # NOTE: The Planck sphere charge plays into the configuration of the magnetic field (like is it curling clockwise or anticlockwise).
+        # NOTE: Assumption: Magnetic fields are not impeded by other Planck spheres. (i.e., passes through them)        
+        # NOTE: At each point in space the magnetic field has a vector direction, which is related (TBD) to the location of the Planck sphere at the time when it was emitted.
+        # NOTE: At each point in absolute time and absolute space (Map 1) the total vector magnetic field is the vector sum of all arriving magnetic fields.
         pass
     
-    class planckSphereAtAbsolutePointTime
-    """Planck Sphere at absolute point and time in Map 1 (Euclidean space and time) 
+    # TODO
+    """
+    FUNCTION: planckSphereAtAbsolutePointTime
+    Planck Sphere at absolute point and time in Map 1 (Euclidean space and time) 
     
     Args:
         This is a Planck sphere in Map 1 absolute location (x,y,z) at absolute time t.
@@ -85,6 +87,5 @@ class planckSphere:
         2) Vector sum of all arriving electric fields.
         3) Vector sum of all arriving magnetic fields.
         4) Vector velocity of the Planck sphere. This is used in the kinetic energy calculation, etc.
-        Now we can calculate the force on each Planck sphere and its characteristics at t plus delta t.
-        
+        Now we can calculate the force on each Planck sphere and its characteristics at t plus delta t.        
     """
