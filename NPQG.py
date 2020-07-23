@@ -20,6 +20,8 @@ class planckSphere:
     surfaceArea = 4 * pi * radius**2
     volume = (4/3) * pi * (radius**2)
 
+    electricFieldMaxRadius = 100
+
     def __init__(self, planckType, planckRadius, point=Point(0,0,0), vector=Vector(0,0,0), chargeMagnitude=Fraction(1,6)):
         # process args
         if planckType == 'electrino':
@@ -34,15 +36,24 @@ class planckSphere:
         if isinstance(point, Point):
             self.point = point
         if isinstance(vector, Vector):
-            self.vector = vector    
+            self.vector = vector
+
+        self.electricFieldTime = 0
+        self.electricFieldRadius = 0
+        self.magneticFieldTime = 0
+        self.magneticFieldRadius = 0
 
     # TODO
     def nextPoint(self):
         pass
     
-    # TODO
-    def calculateElectricField(self):
-        # TODO: Calculate radius of electric field
+    def calculateCurrentElectricField(self, electricFieldMaxRadius):
+        if self.electricFieldTime <= electricFieldMaxRadius:
+            self.electricFieldRadius = self.charge/(6 * (self.electricFieldTime ** 2))
+            self.electricFieldTime += 1
+        else:
+            self.electricFieldTime = 0
+            self.electricFieldRadius = 0
 
         # NOTE: Each and every Planck sphere is always emitting an electric field.
         # NOTE: The electric field emitted by a Planck sphere propogates at local c in Map 1 (Euclidean space and time).
@@ -60,8 +71,8 @@ class planckSphere:
         pass
     
     # TODO
-    def calculateMagneticField(self):
-        # TODO: Calculate radius of magnetic field
+    def calculateCurrentMagneticField(self):
+        # TODO: Calculate radius of current magnetic field
 
         # TODO: look at shape of spreading magnetic field from a moving charge.
         # NOTE: If a particle is moving it creates a magnetic field.  
