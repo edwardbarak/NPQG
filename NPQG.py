@@ -42,11 +42,14 @@ class planckSphere:
     
     # TODO
     def calculateElectricField(self):
+        # TODO: Calculate radius of electric field
+
         # NOTE: Each and every Planck sphere is always emitting an electric field.
         # NOTE: The electric field emitted by a Planck sphere propogates at local c in Map 1 (Euclidean space and time).
         # NOTE: The radial distance from the center of the sphere is used to calculate field strength.         
-        # NOTE: Spheres are immutable so no other Planck sphere can overlap within their radius. 
         # NOTE: We should measure distance such that everything is measured in planck lengths as the unit vector. 
+
+        # NOTE: Spheres are immutable so no other Planck sphere can overlap within their radius.         
         # NOTE: At a radial distance of 1 Planck length, i.e., the surface of the Planck sphere, electric field is (e/6)/ (1 squared) which is e/6. 
         # NOTE: At a radial distance of 1.5 Planck lengths the field is e/(6*1.5*1.5). 
         # NOTE: Charge is measured in e, so likewise e can be considered as 1 unit charge.
@@ -58,6 +61,8 @@ class planckSphere:
     
     # TODO
     def calculateMagneticField(self):
+        # TODO: Calculate radius of magnetic field
+
         # TODO: look at shape of spreading magnetic field from a moving charge.
         # NOTE: If a particle is moving it creates a magnetic field.  
         # NOTE: Magnetic fields exert forces on charged particles. 
@@ -70,6 +75,9 @@ class planckSphere:
     
     # TODO
     def calculateElectricFieldInteraction(self):
+        # TODO: Calculate distance from self and target planck sphere, compare distance between both spheres with self.electricFieldRadius and target.electricFieldRadius
+        # if dist(self, target) <= (self.electricFieldRadius + target.electricFieldRadius): interact()
+        
         # NOTE: Electric fields exert forces on other Planck spheres.
         # NOTE: electrino repulses electrino
         # NOTE: positrino repulses positrino
@@ -78,10 +86,14 @@ class planckSphere:
 
     # TODO
     def calculateMagneticFieldInteraction(self):
+        # TODO: Calculate distance from self and target planck sphere, compare distance between both spheres with self.magneticFieldRadius and target.magneticFieldRadius
+        # if dist(self, target) <= (self.magneticFieldRadius + target.magneticFieldRadius): interact()
         pass
 
     # TODO
     def calculateKineticInteraction(self):
+        # TODO: Calculate distance from self and target planck sphere, compare distance between both spheres with self.radius and target.radius
+        # if dist(self, target) <= (self.radius + target.radius): interact()
         pass
 
     # TODO
