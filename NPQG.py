@@ -13,7 +13,6 @@ class planckSphere:
     """
 
     # Class Variables
-    # TODO: Determine if radius affects other shape calculations like in regular geometry
     radius = 1.0
     diameter = 2.0
     circumference = 6.283
