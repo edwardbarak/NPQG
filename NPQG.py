@@ -1,5 +1,6 @@
 from fractions import Fraction
 from vectors import Point, Vector
+from math import pi
 
 class planckSphere:
     """Planck sphere object.
@@ -13,11 +14,11 @@ class planckSphere:
     """
 
     # Class Variables
-    radius = 1.0
-    diameter = 2.0
-    circumference = 6.283
-    surfaceArea = 12.566
-    volume = 4.189
+    radius = 1.0 # radius of the planck sphere is the planck length. 
+    diameter = 2 * radius
+    circumference = 2 * pi * radius
+    surfaceArea = 4 * pi * radius**2
+    volume = (4/3) * pi * (radius**2)
 
     def __init__(self, planckType, planckRadius, point=Point(0,0,0), vector=Vector(0,0,0), chargeMagnitude=Fraction(1,6)):
         # process args
@@ -42,13 +43,8 @@ class planckSphere:
     # TODO
     def calculateElectricField(self):
         # NOTE: Each and every Planck sphere is always emitting an electric field.
-        # NOTE: Electric fields exert forces on other Planck spheres.
-        # NOTE: electrino repulses electrino
-        # NOTE: positrino repulses positrino
-        # NOTE: electrino attracts positrino and vice versa.
         # NOTE: The electric field emitted by a Planck sphere propogates at local c in Map 1 (Euclidean space and time).
-        # NOTE: The radial distance from the center of the sphere is used to calculate field strength. 
-        # NOTE: The radius of the planck sphere is the planck length. 
+        # NOTE: The radial distance from the center of the sphere is used to calculate field strength.         
         # NOTE: Spheres are immutable so no other Planck sphere can overlap within their radius. 
         # NOTE: We should measure distance such that everything is measured in planck lengths as the unit vector. 
         # NOTE: At a radial distance of 1 Planck length, i.e., the surface of the Planck sphere, electric field is (e/6)/ (1 squared) which is e/6. 
@@ -72,6 +68,22 @@ class planckSphere:
         # NOTE: At each point in absolute time and absolute space (Map 1) the total vector magnetic field is the vector sum of all arriving magnetic fields.
         pass
     
+    # TODO
+    def calculateElectricFieldInteraction(self):
+        # NOTE: Electric fields exert forces on other Planck spheres.
+        # NOTE: electrino repulses electrino
+        # NOTE: positrino repulses positrino
+        # NOTE: electrino attracts positrino and vice versa.
+        pass
+
+    # TODO
+    def calculateMagneticFieldInteraction(self):
+        pass
+
+    # TODO
+    def calculateKineticInteraction(self):
+        pass
+
     # TODO
     """
     FUNCTION: planckSphereAtAbsolutePointTime
