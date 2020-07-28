@@ -58,7 +58,9 @@ class simulator:
 
     # TODO
     def __generateSpheres(self, n, minDist, maxDist, minXVector, maxXVector, minYVector, maxYVector, minZVector, maxZVector, boundingBox):
-        # return np.array of planckSpheres
+        # pass through coordinates within boundingBox and generate planckSpheres
+        #   store each generated planckSphere into self.currentDB, which is a np.array
+        #   n - 1
         pass        
 
     def __nextStep(self):
