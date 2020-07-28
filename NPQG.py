@@ -61,6 +61,37 @@ class simulator:
         # return np.array of planckSpheres
         pass        
 
+    def __nextStep(self):
+        # calculates next step in time. 
+        
+        # pop planckSpheres from self.currentDB to self.nextDB
+        # when self.currentDB has been completely popped over to self.nextDB, self.currentDB = self.nextDB
+        # wipe self.nextDB
+        pass
+    
+    # TODO
+    def __calculateElectricFieldInteraction(self):
+        # TODO: Calculate distance from self and target planck sphere, compare distance between both spheres with self.electricFieldRadius and target.electricFieldRadius
+        # if dist(self, target) <= (self.electricFieldRadius + target.electricFieldRadius): interact()
+        
+        # NOTE: Electric fields exert forces on other Planck spheres.
+        # NOTE: electrino repulses electrino
+        # NOTE: positrino repulses positrino
+        # NOTE: electrino attracts positrino and vice versa.
+        pass
+
+    # TODO
+    def __calculateMagneticFieldInteraction(self):
+        # TODO: Calculate distance from self and target planck sphere, compare distance between both spheres with self.magneticFieldRadius and target.magneticFieldRadius
+        # if dist(self, target) <= (self.magneticFieldRadius + target.magneticFieldRadius): interact()
+        pass
+
+    # TODO
+    def __calculateKineticInteraction(self):
+        # TODO: Calculate distance from self and target planck sphere, compare distance between both spheres with self.radius and target.radius
+        # if dist(self, target) <= (self.radius + target.radius): interact()
+        pass
+
 class planckSphere:
     """Planck sphere object.
     
@@ -101,10 +132,6 @@ class planckSphere:
         self.electricFieldRadius = 0
         self.magneticFieldTime = 0
         self.magneticFieldRadius = 0
-
-    # TODO
-    def nextPoint(self):
-        pass
     
     def calculateCurrentElectricField(self, electricFieldMaxRadius):
         if self.electricFieldTime <= electricFieldMaxRadius:
@@ -128,7 +155,7 @@ class planckSphere:
         # NOTE: At each point in space the electric field has a vector direction, which is radial from the location of the Planck sphere at the time when it was emitted.
         # NOTE: At each point in absolute time and absolute space (Map 1) the total vector electric field is the vector sum of all arriving electric fields.
         pass
-    
+
     # TODO
     def calculateCurrentMagneticField(self):
         # TODO: Calculate radius of current magnetic field
@@ -141,29 +168,6 @@ class planckSphere:
         # NOTE: Assumption: Magnetic fields are not impeded by other Planck spheres. (i.e., passes through them)        
         # NOTE: At each point in space the magnetic field has a vector direction, which is related (TBD) to the location of the Planck sphere at the time when it was emitted.
         # NOTE: At each point in absolute time and absolute space (Map 1) the total vector magnetic field is the vector sum of all arriving magnetic fields.
-        pass
-    
-    # TODO
-    def calculateElectricFieldInteraction(self):
-        # TODO: Calculate distance from self and target planck sphere, compare distance between both spheres with self.electricFieldRadius and target.electricFieldRadius
-        # if dist(self, target) <= (self.electricFieldRadius + target.electricFieldRadius): interact()
-        
-        # NOTE: Electric fields exert forces on other Planck spheres.
-        # NOTE: electrino repulses electrino
-        # NOTE: positrino repulses positrino
-        # NOTE: electrino attracts positrino and vice versa.
-        pass
-
-    # TODO
-    def calculateMagneticFieldInteraction(self):
-        # TODO: Calculate distance from self and target planck sphere, compare distance between both spheres with self.magneticFieldRadius and target.magneticFieldRadius
-        # if dist(self, target) <= (self.magneticFieldRadius + target.magneticFieldRadius): interact()
-        pass
-
-    # TODO
-    def calculateKineticInteraction(self):
-        # TODO: Calculate distance from self and target planck sphere, compare distance between both spheres with self.radius and target.radius
-        # if dist(self, target) <= (self.radius + target.radius): interact()
         pass
 
     # TODO
