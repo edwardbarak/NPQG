@@ -1,6 +1,38 @@
+import numpy as np
 from fractions import Fraction
 from vectors import Point, Vector
 from math import pi
+
+# TODO
+class simulator:
+    """Simulator object. Used to simulate n planckSphere interactions over t time.
+
+    Args:
+        n (int): Number of planckSpheres to generate
+        t (int): Duration of simulation in planck time
+        
+        minDist (int): Minimum distance between generated planckSpheres. Default is planckSphere.radius * 2
+        maxDist (int): Maximum distance between generated planckSpheres. Default is planckSphere.electricFieldMaxRadius * 2 + minDist
+        
+        minXVector (int): Minimum velocity for generated planckSpheres on X axis. Default is 0.
+        maxXVector (int): Maximum velocity for generated planckSpheres on X axis. Default is planckSphere.electricFieldMaxRadius.
+        minYVector (int): Minimum velocity for generated planckSpheres on Y axis. Default is 0.
+        maxYVector (int): Maximum velocity for generated planckSpheres on Y axis. Default is planckSphere.electricFieldMaxRadius.
+        minZVector (int): Minimum velocity for generated planckSpheres on Z axis. Default is 0.
+        maxZVector (int): Maximum velocity for generated planckSpheres on Z axis. Default is planckSphere.electricFieldMaxRadius.
+
+    """
+
+    # TODO
+    def __init__(self, planckSphere, n, t, **kwargs):
+        # self.__generateSpheres(n)
+        pass
+
+    # TODO
+    def __generateSpheres(self, n, boundingBox):
+        # 
+        # return np.array of planckSphere
+        pass        
 
 class planckSphere:
     """Planck sphere object.
