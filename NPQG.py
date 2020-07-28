@@ -1,3 +1,4 @@
+import random
 import numpy as np
 from fractions import Fraction
 from vectors import Point, Vector
@@ -23,6 +24,8 @@ class simulator:
 
         boundingBox (tuple(int, int, int)): Defines dimensions of box where planckSpheres can be generated using a tuple of (xLength, yLength, zLength). Default is n * planckSphere.electricFieldMaxRadius * 2 for x, y, & z.
 
+        seed (int): Set random.seed()
+
     """
 
     # TODO
@@ -40,11 +43,15 @@ class simulator:
         minZVector=0,
         maxZVector=planckSphere.electricFieldMaxRadius,
         boundingBox=None,
+        seed=None
         ):
 
         if boundingBox == None:
-            __defaultLength = n * planckSphere.electricFieldMaxRadius * 2
-            boundingBox = (__defaultLength, __defaultLength, __defaultLength)
+            _defaultLength = n * planckSphere.electricFieldMaxRadius * 2
+            boundingBox = (_defaultLength, _defaultLength, _defaultLength)
+
+        if seed not None:
+            random.seed(seed)
 
         # self.currentDB = self.__generateSpheres(n, minDist, maxDist, minXVector, maxXVector, minYVector, maxYVector, minZVector, maxZVector, boundingBox)
         pass
