@@ -39,8 +39,13 @@ class simulator:
         maxYVector=planckSphere.electricFieldMaxRadius,
         minZVector=0,
         maxZVector=planckSphere.electricFieldMaxRadius,
-        boundingBox=(n*planckSphere.electricFieldMaxRadius*2,n*planckSphere.electricFieldMaxRadius*2,n*planckSphere.electricFieldMaxRadius*2),):
-                
+        boundingBox=None,
+        ):
+
+        if boundingBox == None:
+            __defaultLength = n * planckSphere.electricFieldMaxRadius * 2
+            boundingBox = (__defaultLength, __defaultLength, __defaultLength)
+                        
         # self.currentDB = self.__generateSpheres(n, boundingBox)
         pass
 
