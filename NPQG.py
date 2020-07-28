@@ -21,11 +21,27 @@ class simulator:
         minZVector (int): Minimum velocity for generated planckSpheres on Z axis. Default is 0.
         maxZVector (int): Maximum velocity for generated planckSpheres on Z axis. Default is planckSphere.electricFieldMaxRadius.
 
+        boundingBox (tuple(int, int, int)): Defines dimensions of box where planckSpheres can be generated using a tuple of (xLength, yLength, zLength). Default is n * planckSphere.electricFieldMaxRadius * 2 for x, y, & z.
+
     """
 
     # TODO
-    def __init__(self, planckSphere, n, t, **kwargs):
-        # self.__generateSpheres(n)
+    def __init__(
+        self, 
+        planckSphere,
+        n, 
+        t, 
+        minDist=planckSphere.radius*2,
+        maxDist=planckSphere.electricFieldMaxRadius*2+planckSphere.radius*2,
+        minXVector=0,
+        maxXVector=planckSphere.electricFieldMaxRadius,
+        minYVector=0,
+        maxYVector=planckSphere.electricFieldMaxRadius,
+        minZVector=0,
+        maxZVector=planckSphere.electricFieldMaxRadius,
+        boundingBox=(n*planckSphere.electricFieldMaxRadius*2,n*planckSphere.electricFieldMaxRadius*2,n*planckSphere.electricFieldMaxRadius*2),):
+                
+        # self.currentDB = self.__generateSpheres(n, boundingBox)
         pass
 
     # TODO
