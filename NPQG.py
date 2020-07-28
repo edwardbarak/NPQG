@@ -50,7 +50,7 @@ class simulator:
             _defaultLength = n * planckSphere.electricFieldMaxRadius * 2
             boundingBox = (_defaultLength, _defaultLength, _defaultLength)
 
-        if seed not None:
+        if seed != None:
             random.seed(seed)
 
         # self.currentDB = self.__generateSpheres(n, minDist, maxDist, minXVector, maxXVector, minYVector, maxYVector, minZVector, maxZVector, boundingBox)
