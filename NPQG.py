@@ -45,14 +45,13 @@ class simulator:
         if boundingBox == None:
             __defaultLength = n * planckSphere.electricFieldMaxRadius * 2
             boundingBox = (__defaultLength, __defaultLength, __defaultLength)
-                        
-        # self.currentDB = self.__generateSpheres(n, boundingBox)
+
+        # self.currentDB = self.__generateSpheres(n, minDist, maxDist, minXVector, maxXVector, minYVector, maxYVector, minZVector, maxZVector, boundingBox)
         pass
 
     # TODO
-    def __generateSpheres(self, n, boundingBox):
-        # 
-        # return np.array of planckSphere
+    def __generateSpheres(self, n, minDist, maxDist, minXVector, maxXVector, minYVector, maxYVector, minZVector, maxZVector, boundingBox):
+        # return np.array of planckSpheres
         pass        
 
 class planckSphere:
