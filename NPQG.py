@@ -26,6 +26,15 @@ class simulator:
 
         seed (int): Set random.seed()
 
+    Steps:
+        1. Generate planckSpheres
+            a. Define size of area where planckSpheres are to be generated
+            b. Define number of planckSpheres to be generated
+            c. Define min/max radii of planckSpheres
+            d. Define min/max velocities of planckSpheres
+            e. Define number of steps to simulate
+        2. Simulate planckSphere interactions
+
     """
 
     # TODO
