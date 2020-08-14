@@ -145,6 +145,7 @@ class planckSphere:
         self.magneticFieldTime = 0
         self.magneticFieldRadius = 0
     
+    # TODO: Need clarification on whether electric field is constant. If it is, this function needs to be rewritten so that it isn't a function of time.
     def calculateCurrentElectricField(self, electricFieldMaxRadius):
         if self.electricFieldTime <= electricFieldMaxRadius:
             self.electricFieldRadius = self.charge/(6 * (self.electricFieldTime ** 2))
@@ -168,7 +169,7 @@ class planckSphere:
         # NOTE: At each point in absolute time and absolute space (Map 1) the total vector electric field is the vector sum of all arriving electric fields.
         pass
 
-    # TODO
+    # TODO: Need clarification on whether magnetic field is constant. If it is, this function needs to be rewritten so that it isn't a function of time.
     def calculateCurrentMagneticField(self):
         # TODO: Calculate radius of current magnetic field
 
