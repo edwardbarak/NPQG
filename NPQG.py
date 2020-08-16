@@ -30,10 +30,17 @@ class simulator:
         1. Generate planckSpheres
             a. Define size of area where planckSpheres are to be generated
             b. Define number of planckSpheres to be generated
-            c. Define min/max radii of planckSpheres
-            d. Define min/max velocities of planckSpheres
-            e. Define number of steps to simulate
-        2. Simulate planckSphere interactions
+            c. Define min/max velocities of planckSpheres
+            d. Define number of steps to simulate
+        2. Simulate planckSphere interaction steps
+            a. Execute existing vectors for each planckSphere
+            b. Calculate new vectors for each planckSphere
+                1. Calculate physical interactions
+                2. Calculate electric field interactions
+                3. Calculate magnetic field interactions
+                4. Combine physical, electrical, and magnetic interactions into single vector
+                5. Store single vector in each planckSphere, to be executed in the next step
+            c. Loop until all steps have been simulated
 
     """
 
