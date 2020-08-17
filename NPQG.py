@@ -31,16 +31,16 @@ class simulator:
             a. Define size of area where planckSpheres are to be generated
             b. Define number of planckSpheres to be generated
             c. Define min/max velocities of planckSpheres
-            d. Define number of steps to simulate
-        2. Simulate planckSphere interaction steps
+            d. Define number of ticks to simulate
+        2. Simulate planckSphere interaction ticks
             a. Execute existing vectors for each planckSphere
             b. Calculate new vectors for each planckSphere
                 1. Calculate physical interactions
                 2. Calculate electric field interactions
                 3. Calculate magnetic field interactions
                 4. Combine physical, electrical, and magnetic interactions into single vector
-                5. Store single vector in each planckSphere, to be executed in the next step
-            c. Loop until all steps have been simulated
+                5. Store single vector in each planckSphere, to be executed in the next tick
+            c. Loop until all ticks have been simulated
 
     """
 
@@ -80,8 +80,8 @@ class simulator:
         #   n - 1
         pass        
 
-    def __nextStep(self):
-        # calculates next step in time. 
+    def __nextTick(self):
+        # calculates next tick in time. 
         
         # pop planckSpheres from self.currentDB to self.nextDB
         # when self.currentDB has been completely popped over to self.nextDB, self.currentDB = self.nextDB
