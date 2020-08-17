@@ -211,3 +211,10 @@ class planckSphere:
         4) Vector velocity of the Planck sphere. This is used in the kinetic energy calculation, etc.
         Now we can calculate the force on each Planck sphere and its characteristics at t plus delta t.        
     """
+
+class electricField:
+    # NOTE: electricField object needed as planckSpheres generate new electric fields at each tick
+    # NOTE: electricField behavior: expands spherically from the center of a planckSphere, makes contact only at the surface of the sphere. For computational purposes, it might make sense to calculate interaction by seeing if there is an intersection between the interacting object and the space between T(n) and T(n+1)
+    # class variables
+    def __init__(self):
+        pass
